@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --ink: #E8E1D3;
+  --ink-dim: #9C9484;
+  --ground: #1B1815;
+  --ground-raised: #221E1A;
+  --line: #3A342C;
+  --brass: #C9A24B;
+  --up: #C0483B;      /* VN: gia tang -> DO */
+  --down: #4E8B6F;    /* VN: gia giam -> XANH */
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: 'Source Serif 4', Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.masthead {
+  border-bottom: 1px solid var(--line);
+  padding: 2.75rem 1.5rem 2rem;
+}
+
+.masthead-inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.masthead h1 {
+  margin: 0;
+  font-size: 2.1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.subtitle {
+  margin: 0.5rem 0 0;
+  color: var(--ink-dim);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.82rem;
+}
+
+.content {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+  width: 100%;
+}
+
+.notice {
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--brass);
+  padding: 1.2rem 1.4rem;
+  background: var(--ground-raised);
+}
+
+.notice p { margin: 0.3rem 0; }
+.notice-sub { color: var(--ink-dim); font-size: 0.9rem; }
+.notice code {
+  font-family: 'IBM Plex Mono', monospace;
+  background: rgba(201, 162, 75, 0.12);
+  padding: 0.1rem 0.35rem;
+  color: var(--brass);
+}
+
+.meta-row {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  padding-bottom: 1.75rem;
+  margin-bottom: 2.25rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.meta-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--ink-dim);
+}
+
+.meta-value {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 1.1rem;
+  color: var(--ink);
+}
+
+.picks-section { margin-bottom: 2.75rem; }
+
+.picks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.pick-card {
+  background: var(--ground-raised);
+  padding: 1.4rem 1.3rem;
+  position: relative;
+}
+
+.pick-rank {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--brass);
+  position: absolute;
+  top: 1.1rem;
+  right: 1.2rem;
+}
+
+.pick-symbol {
+  display: block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.1rem;
+}
+
+.pick-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.pick-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.85rem;
+}
+
+.pick-stat span { color: var(--ink-dim); }
+.pick-stat strong {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+}
+
+.pct-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+}
+.pct-up { color: var(--up); }
+.pct-down { color: var(--down); }
+
+.table-section table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.86rem;
+}
+
+.table-section th {
+  text-align: left;
+  padding: 0.6rem 0.7rem;
+  color: var(--ink-dim);
+  font-weight: 500;
+  font-size: 0.72rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.table-section td {
+  padding: 0.55rem 0.7rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.row-picked { background: rgba(201, 162, 75, 0.06); }
+.cell-symbol { font-weight: 600; letter-spacing: 0.02em; }
+
+.footnote {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  color: var(--ink-dim);
+  font-size: 0.82rem;
+  font-style: italic;
+}
+
+.loading {
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--ink-dim);
+}

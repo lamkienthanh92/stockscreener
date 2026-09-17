@@ -1,0 +1,121 @@
+{
+  "generated_at": "2026-09-17 11:06:39",
+  "target_month": "2026-09",
+  "weights": {
+    "seasonal": 0.2,
+    "momentum": 0.8
+  },
+  "picks": [
+    {
+      "symbol": "VIC",
+      "seasonal_score": -0.06413796557549475,
+      "momentum_score": 15.178135675939487,
+      "combo_score": 0.9600000000000001
+    },
+    {
+      "symbol": "STB",
+      "seasonal_score": -0.2015876836799839,
+      "momentum_score": 12.686567164179108,
+      "combo_score": 0.9266666666666667
+    },
+    {
+      "symbol": "SSB",
+      "seasonal_score": -5.858956534693673,
+      "momentum_score": 20.422535211267622,
+      "combo_score": 0.8066666666666668
+    }
+  ],
+  "all_candidates_ranked": [
+    {
+      "symbol": "VIC",
+      "seasonal_score": -0.06413796557549475,
+      "momentum_score": 15.178135675939487,
+      "combo_score": 0.9600000000000001
+    },
+    {
+      "symbol": "STB",
+      "seasonal_score": -0.2015876836799839,
+      "momentum_score": 12.686567164179108,
+      "combo_score": 0.9266666666666667
+    },
+    {
+      "symbol": "SSB",
+      "seasonal_score": -5.858956534693673,
+      "momentum_score": 20.422535211267622,
+      "combo_score": 0.8066666666666668
+    },
+    {
+      "symbol": "HDB",
+      "seasonal_score": -0.6495511741460952,
+      "momentum_score": 7.961165048543695,
+      "combo_score": 0.7733333333333334
+    },
+    {
+      "symbol": "MCH",
+      "seasonal_score": -1.012823127254314,
+      "momentum_score": 9.528186274509798,
+      "combo_score": 0.7666666666666667
+    },
+    {
+      "symbol": "ACB",
+      "seasonal_score": -0.7365915625466717,
+      "momentum_score": 5.496040987424311,
+      "combo_score": 0.7266666666666668
+    },
+    {
+      "symbol": "MBB",
+      "seasonal_score": -0.6868301838711937,
+      "momentum_score": 4.726368159203975,
+      "combo_score": 0.7133333333333334
+    },
+    {
+      "symbol": "VNM",
+      "seasonal_score": -1.1078764288922298,
+      "momentum_score": 8.763966480446928,
+      "combo_score": 0.7066666666666667
+    },
+    {
+      "symbol": "TCB",
+      "seasonal_score": -0.46499437384384523,
+      "momentum_score": 3.245749613601223,
+      "combo_score": 0.7
+    },
+    {
+      "symbol": "VPB",
+      "seasonal_score": -0.4156972842240101,
+      "momentum_score": 3.153988868274582,
+      "combo_score": 0.6866666666666666
+    },
+    {
+      "symbol": "SAB",
+      "seasonal_score": -0.9475043137429426,
+      "momentum_score": 3.260869565217406,
+      "combo_score": 0.6466666666666667
+    },
+    {
+      "symbol": "GAS",
+      "seasonal_score": -0.4195854981363706,
+      "momentum_score": 0.0,
+      "combo_score": 0.6266666666666667
+    },
+    {
+      "symbol": "TCX",
+      "seasonal_score": 0,
+      "momentum_score": -1.6767851980341253,
+      "combo_score": 0.6233333333333333
+    },
+    {
+      "symbol": "FPT",
+      "seasonal_score": -1.0604943385372823,
+      "momentum_score": 0.411522633744843,
+      "combo_score": 0.5466666666666667
+    },
+    {
+      "symbol": "VHM",
+      "seasonal_score": -0.9449976174685383,
+      "momentum_score": -0.24596884394644247,
+      "combo_score": 0.52
+    }
+  ],
+  "note": "Day la ket qua walk-forward, KHONG dam bao loi nhuan. Tu danh gia rui ro truoc khi giao dich."
+}
