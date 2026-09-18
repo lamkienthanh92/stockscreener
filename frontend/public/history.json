@@ -1,0 +1,1017 @@
+{
+  "generated_at": "2026-09-17 13:49:28",
+  "weights": {
+    "seasonal": 0.2,
+    "momentum": 0.8
+  },
+  "min_chain_years": 4,
+  "momentum_days": 90,
+  "inject_per_month": 3000000,
+  "transaction_cost_pct": 0.4,
+  "stats": {
+    "n_months_tested": 80,
+    "n_years_tested": 6.7,
+    "win_rate_pct": 60.0,
+    "max_drawdown_pct": -24.32,
+    "total_invested": 240000000,
+    "final_balance": 653219390.0,
+    "total_return_pct": 172.2,
+    "cagr_approx_pct": 16.2,
+    "best_month": {
+      "year": 2021,
+      "month": 2,
+      "label": "2021-02",
+      "picks": [
+        "GVR",
+        "BSR",
+        "SSI"
+      ],
+      "return_pct": 37.98,
+      "balance": 69059578.0
+    },
+    "worst_month": {
+      "year": 2026,
+      "month": 3,
+      "label": "2026-03",
+      "picks": [
+        "GVR",
+        "VIC",
+        "BSR"
+      ],
+      "return_pct": -20.69,
+      "balance": 629212465.0
+    }
+  },
+  "monthly_log": [
+    {
+      "year": 2020,
+      "month": 1,
+      "label": "2020-01",
+      "picks": [
+        "VCB",
+        "BID",
+        "VJC"
+      ],
+      "return_pct": -1.54,
+      "balance": 2953769.0
+    },
+    {
+      "year": 2020,
+      "month": 2,
+      "label": "2020-02",
+      "picks": [
+        "SHB",
+        "HPG",
+        "BID"
+      ],
+      "return_pct": 11.79,
+      "balance": 6655889.0
+    },
+    {
+      "year": 2020,
+      "month": 3,
+      "label": "2020-03",
+      "picks": [
+        "SHB",
+        "CTG",
+        "BID"
+      ],
+      "return_pct": -11.78,
+      "balance": 8518068.0
+    },
+    {
+      "year": 2020,
+      "month": 4,
+      "label": "2020-04",
+      "picks": [
+        "SHB",
+        "VPB",
+        "MCH"
+      ],
+      "return_pct": 16.85,
+      "balance": 13458405.0
+    },
+    {
+      "year": 2020,
+      "month": 5,
+      "label": "2020-05",
+      "picks": [
+        "MCH",
+        "SHB",
+        "FPT"
+      ],
+      "return_pct": 2.87,
+      "balance": 16931465.0
+    },
+    {
+      "year": 2020,
+      "month": 6,
+      "label": "2020-06",
+      "picks": [
+        "HPG",
+        "SHB",
+        "VNM"
+      ],
+      "return_pct": -2.81,
+      "balance": 19371860.0
+    },
+    {
+      "year": 2020,
+      "month": 7,
+      "label": "2020-07",
+      "picks": [
+        "HPG",
+        "STB",
+        "LPB"
+      ],
+      "return_pct": -2.26,
+      "balance": 21866802.0
+    },
+    {
+      "year": 2020,
+      "month": 8,
+      "label": "2020-08",
+      "picks": [
+        "HPG",
+        "VIB",
+        "HDB"
+      ],
+      "return_pct": 13.61,
+      "balance": 28252144.0
+    },
+    {
+      "year": 2020,
+      "month": 9,
+      "label": "2020-09",
+      "picks": [
+        "VIB",
+        "ACB",
+        "HDB"
+      ],
+      "return_pct": 16.54,
+      "balance": 36419722.0
+    },
+    {
+      "year": 2020,
+      "month": 10,
+      "label": "2020-10",
+      "picks": [
+        "VIB",
+        "MWG",
+        "HDB"
+      ],
+      "return_pct": 4.49,
+      "balance": 41190045.0
+    },
+    {
+      "year": 2020,
+      "month": 11,
+      "label": "2020-11",
+      "picks": [
+        "LPB",
+        "VIB",
+        "MSN"
+      ],
+      "return_pct": 2.39,
+      "balance": 45244976.0
+    },
+    {
+      "year": 2020,
+      "month": 12,
+      "label": "2020-12",
+      "picks": [
+        "HPG",
+        "LPB",
+        "MSN"
+      ],
+      "return_pct": 12.06,
+      "balance": 54062355.0
+    },
+    {
+      "year": 2021,
+      "month": 1,
+      "label": "2021-01",
+      "picks": [
+        "SSI",
+        "GVR",
+        "MSN"
+      ],
+      "return_pct": -17.55,
+      "balance": 47049402.0
+    },
+    {
+      "year": 2021,
+      "month": 2,
+      "label": "2021-02",
+      "picks": [
+        "GVR",
+        "BSR",
+        "SSI"
+      ],
+      "return_pct": 37.98,
+      "balance": 69059578.0
+    },
+    {
+      "year": 2021,
+      "month": 3,
+      "label": "2021-03",
+      "picks": [
+        "SSI",
+        "GVR",
+        "VIB"
+      ],
+      "return_pct": 3.27,
+      "balance": 74413085.0
+    },
+    {
+      "year": 2021,
+      "month": 4,
+      "label": "2021-04",
+      "picks": [
+        "BSR",
+        "LPB",
+        "SHB"
+      ],
+      "return_pct": -0.25,
+      "balance": 77219339.0
+    },
+    {
+      "year": 2021,
+      "month": 5,
+      "label": "2021-05",
+      "picks": [
+        "VPB",
+        "HPG",
+        "VIB"
+      ],
+      "return_pct": 23.42,
+      "balance": 99007995.0
+    },
+    {
+      "year": 2021,
+      "month": 6,
+      "label": "2021-06",
+      "picks": [
+        "STB",
+        "SHB",
+        "LPB"
+      ],
+      "return_pct": -4.32,
+      "balance": 97603979.0
+    },
+    {
+      "year": 2021,
+      "month": 7,
+      "label": "2021-07",
+      "picks": [
+        "MBB",
+        "LPB",
+        "SSI"
+      ],
+      "return_pct": -7.43,
+      "balance": 93129333.0
+    },
+    {
+      "year": 2021,
+      "month": 8,
+      "label": "2021-08",
+      "picks": [
+        "FPT",
+        "MSN",
+        "SSI"
+      ],
+      "return_pct": 1.87,
+      "balance": 97923568.0
+    },
+    {
+      "year": 2021,
+      "month": 9,
+      "label": "2021-09",
+      "picks": [
+        "SSI",
+        "MWG",
+        "GVR"
+      ],
+      "return_pct": -1.07,
+      "balance": 99838982.0
+    },
+    {
+      "year": 2021,
+      "month": 10,
+      "label": "2021-10",
+      "picks": [
+        "MSN",
+        "MWG",
+        "VJC"
+      ],
+      "return_pct": 2.23,
+      "balance": 105128519.0
+    },
+    {
+      "year": 2021,
+      "month": 11,
+      "label": "2021-11",
+      "picks": [
+        "GAS",
+        "HPG",
+        "VJC"
+      ],
+      "return_pct": -13.25,
+      "balance": 93805108.0
+    },
+    {
+      "year": 2021,
+      "month": 12,
+      "label": "2021-12",
+      "picks": [
+        "SSI",
+        "MWG",
+        "BID"
+      ],
+      "return_pct": 0.24,
+      "balance": 97037163.0
+    },
+    {
+      "year": 2022,
+      "month": 1,
+      "label": "2022-01",
+      "picks": [
+        "STB",
+        "VIB",
+        "SSB"
+      ],
+      "return_pct": 0.56,
+      "balance": 100601896.0
+    },
+    {
+      "year": 2022,
+      "month": 2,
+      "label": "2022-02",
+      "picks": [
+        "STB",
+        "VIB",
+        "BID"
+      ],
+      "return_pct": -5.73,
+      "balance": 97669661.0
+    },
+    {
+      "year": 2022,
+      "month": 3,
+      "label": "2022-03",
+      "picks": [
+        "BID",
+        "BSR",
+        "GAS"
+      ],
+      "return_pct": -4.75,
+      "balance": 95885144.0
+    },
+    {
+      "year": 2022,
+      "month": 4,
+      "label": "2022-04",
+      "picks": [
+        "MBB",
+        "FPT",
+        "BID"
+      ],
+      "return_pct": -12.09,
+      "balance": 86929582.0
+    },
+    {
+      "year": 2022,
+      "month": 5,
+      "label": "2022-05",
+      "picks": [
+        "FPT",
+        "MWG",
+        "SAB"
+      ],
+      "return_pct": -1.08,
+      "balance": 88954100.0
+    },
+    {
+      "year": 2022,
+      "month": 6,
+      "label": "2022-06",
+      "picks": [
+        "MWG",
+        "FPT",
+        "VIC"
+      ],
+      "return_pct": -5.7,
+      "balance": 86715235.0
+    },
+    {
+      "year": 2022,
+      "month": 7,
+      "label": "2022-07",
+      "picks": [
+        "FPT",
+        "GAS",
+        "MWG"
+      ],
+      "return_pct": -6.82,
+      "balance": 83598386.0
+    },
+    {
+      "year": 2022,
+      "month": 8,
+      "label": "2022-08",
+      "picks": [
+        "SAB",
+        "GAS",
+        "BID"
+      ],
+      "return_pct": 3.56,
+      "balance": 89681089.0
+    },
+    {
+      "year": 2022,
+      "month": 9,
+      "label": "2022-09",
+      "picks": [
+        "VNM",
+        "SAB",
+        "BID"
+      ],
+      "return_pct": -10.93,
+      "balance": 82555421.0
+    },
+    {
+      "year": 2022,
+      "month": 10,
+      "label": "2022-10",
+      "picks": [
+        "SAB",
+        "VCB",
+        "VNM"
+      ],
+      "return_pct": 6.25,
+      "balance": 90903436.0
+    },
+    {
+      "year": 2022,
+      "month": 11,
+      "label": "2022-11",
+      "picks": [
+        "SSB",
+        "VNM",
+        "SAB"
+      ],
+      "return_pct": -1.73,
+      "balance": 92281117.0
+    },
+    {
+      "year": 2022,
+      "month": 12,
+      "label": "2022-12",
+      "picks": [
+        "VRE",
+        "BID",
+        "VCB"
+      ],
+      "return_pct": 0.45,
+      "balance": 95708014.0
+    },
+    {
+      "year": 2023,
+      "month": 1,
+      "label": "2023-01",
+      "picks": [
+        "CTG",
+        "BID",
+        "VCB"
+      ],
+      "return_pct": 4.69,
+      "balance": 103342217.0
+    },
+    {
+      "year": 2023,
+      "month": 2,
+      "label": "2023-02",
+      "picks": [
+        "HPG",
+        "STB",
+        "LPB"
+      ],
+      "return_pct": 0.15,
+      "balance": 106498749.0
+    },
+    {
+      "year": 2023,
+      "month": 3,
+      "label": "2023-03",
+      "picks": [
+        "LPB",
+        "STB",
+        "VIB"
+      ],
+      "return_pct": 5.12,
+      "balance": 115105441.0
+    },
+    {
+      "year": 2023,
+      "month": 4,
+      "label": "2023-04",
+      "picks": [
+        "VPB",
+        "LPB",
+        "BID"
+      ],
+      "return_pct": -8.54,
+      "balance": 108014166.0
+    },
+    {
+      "year": 2023,
+      "month": 5,
+      "label": "2023-05",
+      "picks": [
+        "HDB",
+        "SSI",
+        "TCB"
+      ],
+      "return_pct": 5.07,
+      "balance": 116644565.0
+    },
+    {
+      "year": 2023,
+      "month": 6,
+      "label": "2023-06",
+      "picks": [
+        "GVR",
+        "VHM",
+        "SSI"
+      ],
+      "return_pct": 8.46,
+      "balance": 129761590.0
+    },
+    {
+      "year": 2023,
+      "month": 7,
+      "label": "2023-07",
+      "picks": [
+        "GVR",
+        "SSI",
+        "HPG"
+      ],
+      "return_pct": 8.32,
+      "balance": 143811154.0
+    },
+    {
+      "year": 2023,
+      "month": 8,
+      "label": "2023-08",
+      "picks": [
+        "GVR",
+        "SSI",
+        "MWG"
+      ],
+      "return_pct": 6.54,
+      "balance": 156419253.0
+    },
+    {
+      "year": 2023,
+      "month": 9,
+      "label": "2023-09",
+      "picks": [
+        "MWG",
+        "SSI",
+        "LPB"
+      ],
+      "return_pct": -8.17,
+      "balance": 146387856.0
+    },
+    {
+      "year": 2023,
+      "month": 10,
+      "label": "2023-10",
+      "picks": [
+        "BSR",
+        "FPT",
+        "GAS"
+      ],
+      "return_pct": -13.39,
+      "balance": 129379339.0
+    },
+    {
+      "year": 2023,
+      "month": 11,
+      "label": "2023-11",
+      "picks": [
+        "LPB",
+        "MCH",
+        "HDB"
+      ],
+      "return_pct": 6.62,
+      "balance": 141148181.0
+    },
+    {
+      "year": 2023,
+      "month": 12,
+      "label": "2023-12",
+      "picks": [
+        "VJC",
+        "HDB",
+        "ACB"
+      ],
+      "return_pct": 7.01,
+      "balance": 154248534.0
+    },
+    {
+      "year": 2024,
+      "month": 1,
+      "label": "2024-01",
+      "picks": [
+        "HDB",
+        "LPB",
+        "BID"
+      ],
+      "return_pct": 9.89,
+      "balance": 172808200.0
+    },
+    {
+      "year": 2024,
+      "month": 2,
+      "label": "2024-02",
+      "picks": [
+        "GVR",
+        "MCH",
+        "BID"
+      ],
+      "return_pct": 17.76,
+      "balance": 207036335.0
+    },
+    {
+      "year": 2024,
+      "month": 3,
+      "label": "2024-03",
+      "picks": [
+        "MCH",
+        "GVR",
+        "TCB"
+      ],
+      "return_pct": 12.19,
+      "balance": 235647330.0
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "label": "2024-04",
+      "picks": [
+        "MCH",
+        "GVR",
+        "TCB"
+      ],
+      "return_pct": -1.48,
+      "balance": 235107123.0
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "label": "2024-05",
+      "picks": [
+        "FPT",
+        "MCH",
+        "GVR"
+      ],
+      "return_pct": 20.63,
+      "balance": 287236505.0
+    },
+    {
+      "year": 2024,
+      "month": 6,
+      "label": "2024-06",
+      "picks": [
+        "MWG",
+        "LPB",
+        "GVR"
+      ],
+      "return_pct": 2.85,
+      "balance": 298518549.0
+    },
+    {
+      "year": 2024,
+      "month": 7,
+      "label": "2024-07",
+      "picks": [
+        "MCH",
+        "LPB",
+        "FPT"
+      ],
+      "return_pct": -2.29,
+      "balance": 294614702.0
+    },
+    {
+      "year": 2024,
+      "month": 8,
+      "label": "2024-08",
+      "picks": [
+        "MCH",
+        "FPT",
+        "LPB"
+      ],
+      "return_pct": 5.38,
+      "balance": 313632867.0
+    },
+    {
+      "year": 2024,
+      "month": 9,
+      "label": "2024-09",
+      "picks": [
+        "HDB",
+        "LPB",
+        "VNM"
+      ],
+      "return_pct": 0.81,
+      "balance": 319207539.0
+    },
+    {
+      "year": 2024,
+      "month": 10,
+      "label": "2024-10",
+      "picks": [
+        "CTG",
+        "LPB",
+        "HDB"
+      ],
+      "return_pct": -1.79,
+      "balance": 316448468.0
+    },
+    {
+      "year": 2024,
+      "month": 11,
+      "label": "2024-11",
+      "picks": [
+        "STB",
+        "MCH",
+        "VHM"
+      ],
+      "return_pct": -0.8,
+      "balance": 316904117.0
+    },
+    {
+      "year": 2024,
+      "month": 12,
+      "label": "2024-12",
+      "picks": [
+        "STB",
+        "MCH",
+        "VIB"
+      ],
+      "return_pct": 9.89,
+      "balance": 351550129.0
+    },
+    {
+      "year": 2025,
+      "month": 1,
+      "label": "2025-01",
+      "picks": [
+        "LPB",
+        "MCH",
+        "STB"
+      ],
+      "return_pct": -1.04,
+      "balance": 350848098.0
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "label": "2025-02",
+      "picks": [
+        "FPT",
+        "LPB",
+        "VIB"
+      ],
+      "return_pct": 0.71,
+      "balance": 356347108.0
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "label": "2025-03",
+      "picks": [
+        "LPB",
+        "CTG",
+        "STB"
+      ],
+      "return_pct": -1.51,
+      "balance": 353909704.0
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "label": "2025-04",
+      "picks": [
+        "VIC",
+        "SHB",
+        "VHM"
+      ],
+      "return_pct": 10.98,
+      "balance": 396109030.0
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "label": "2025-05",
+      "picks": [
+        "VHM",
+        "VIC",
+        "SHB"
+      ],
+      "return_pct": 24.37,
+      "balance": 496355454.0
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "label": "2025-06",
+      "picks": [
+        "VHM",
+        "MWG",
+        "VIC"
+      ],
+      "return_pct": 0.4,
+      "balance": 501358013.0
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "label": "2025-07",
+      "picks": [
+        "TCB",
+        "MSN",
+        "VIC"
+      ],
+      "return_pct": 1.05,
+      "balance": 509642083.0
+    },
+    {
+      "year": 2025,
+      "month": 8,
+      "label": "2025-08",
+      "picks": [
+        "VIC",
+        "SSI",
+        "VPB"
+      ],
+      "return_pct": 25.76,
+      "balance": 644708902.0
+    },
+    {
+      "year": 2025,
+      "month": 9,
+      "label": "2025-09",
+      "picks": [
+        "VPB",
+        "VJC",
+        "SSI"
+      ],
+      "return_pct": -8.59,
+      "balance": 592052549.0
+    },
+    {
+      "year": 2025,
+      "month": 10,
+      "label": "2025-10",
+      "picks": [
+        "VIC",
+        "VPB",
+        "LPB"
+      ],
+      "return_pct": 0.83,
+      "balance": 599987927.0
+    },
+    {
+      "year": 2025,
+      "month": 11,
+      "label": "2025-11",
+      "picks": [
+        "VIC",
+        "LPB",
+        "MCH"
+      ],
+      "return_pct": 18.38,
+      "balance": 713797427.0
+    },
+    {
+      "year": 2025,
+      "month": 12,
+      "label": "2025-12",
+      "picks": [
+        "MCH",
+        "VJC",
+        "VIC"
+      ],
+      "return_pct": 10.35,
+      "balance": 790996095.0
+    },
+    {
+      "year": 2026,
+      "month": 1,
+      "label": "2026-01",
+      "picks": [
+        "VJC",
+        "GAS",
+        "MCH"
+      ],
+      "return_pct": 4.71,
+      "balance": 831425833.0
+    },
+    {
+      "year": 2026,
+      "month": 2,
+      "label": "2026-02",
+      "picks": [
+        "GAS",
+        "BID",
+        "GVR"
+      ],
+      "return_pct": -5.28,
+      "balance": 790355955.0
+    },
+    {
+      "year": 2026,
+      "month": 3,
+      "label": "2026-03",
+      "picks": [
+        "GVR",
+        "VIC",
+        "BSR"
+      ],
+      "return_pct": -20.69,
+      "balance": 629212465.0
+    },
+    {
+      "year": 2026,
+      "month": 4,
+      "label": "2026-04",
+      "picks": [
+        "TCX",
+        "BSR",
+        "GVR"
+      ],
+      "return_pct": 0.86,
+      "balance": 637661296.0
+    },
+    {
+      "year": 2026,
+      "month": 5,
+      "label": "2026-05",
+      "picks": [
+        "VHM",
+        "VIC",
+        "VJC"
+      ],
+      "return_pct": -0.82,
+      "balance": 635399450.0
+    },
+    {
+      "year": 2026,
+      "month": 6,
+      "label": "2026-06",
+      "picks": [
+        "VPL",
+        "LPB",
+        "STB"
+      ],
+      "return_pct": 2.07,
+      "balance": 651646215.0
+    },
+    {
+      "year": 2026,
+      "month": 7,
+      "label": "2026-07",
+      "picks": [
+        "LPB",
+        "VHM",
+        "VIC"
+      ],
+      "return_pct": -1.25,
+      "balance": 646468373.0
+    },
+    {
+      "year": 2026,
+      "month": 8,
+      "label": "2026-08",
+      "picks": [
+        "LPB",
+        "BSR",
+        "STB"
+      ],
+      "return_pct": 0.58,
+      "balance": 653219390.0
+    }
+  ],
+  "validation_notes": [
+    "Walk-forward thật: mỗi tháng chỉ dùng dữ liệu ĐẾN TRƯỚC tháng đó để chọn mã — không nhìn trước tương lai.",
+    "Yêu cầu chuỗi lịch sử tối thiểu 4 năm liên tục trước khi 1 mã được xét chọn (tránh chọn theo may mắn 1-2 năm).",
+    "Đã test độ nhạy theo tần suất giao dịch (tuần / 2 tuần / tháng / 2 tháng) — khung THÁNG cho kết quả tốt và ổn định nhất.",
+    "Đã kiểm chứng bằng Bootstrap (chọn ngẫu nhiên trong nhóm ứng viên hợp lệ, lặp nhiều trăm lần) để đo phần 'may mắn' trong kết quả Top3.",
+    "Kết hợp 2 yếu tố độc lập: Mùa vụ (seasonal, theo chuỗi năm) + Momentum (đà tăng 3 tháng gần nhất) — trọng số đã grid-search riêng cho VN30.",
+    "Đã kiểm chứng cách chia vốn cho 3 mã: chia ĐỀU 1/3 mỗi mã cho kết quả tốt nhất — ưu tiên mã điểm cao hơn thực ra làm giảm hiệu suất.",
+    "Đã trừ chi phí giao dịch thực tế: 0.4%/lần mua-bán (phí môi giới 2 chiều + thuế TNCN 0.1% bán CK) — số liệu hiển thị là SAU chi phí, không phải lý tưởng hóa.",
+    "Đây KHÔNG phải chiến lược 'chắc thắng' — vẫn có tháng/năm hiệu suất yếu hoặc âm trong lịch sử test. Luôn tự đánh giá rủi ro trước khi giao dịch thật."
+  ]
+}

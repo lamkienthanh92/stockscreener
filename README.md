@@ -95,17 +95,23 @@ Tạo Basic Task → Trigger: Daily 8:00 AM → Action: chạy `python.exe fetch
 
 ## Điều chỉnh tham số chiến lược
 
-Mở `analysis.py`, sửa 3 hằng số đầu file:
+Mở `analysis.py`, sửa các hằng số đầu file:
 
 ```python
-MIN_CHAIN = 4        # so nam lich su toi thieu de xet mua vu
-MOM_DAYS = 90         # do dai momentum (ngay)
-W_SEASONAL = 0.2      # trong so mua vu
-W_MOMENTUM = 0.8      # trong so momentum
+MIN_CHAIN = 4                # so nam lich su toi thieu de xet mua vu
+MOM_DAYS = 90                 # do dai momentum (ngay)
+W_SEASONAL = 0.2              # trong so mua vu
+W_MOMENTUM = 0.8              # trong so momentum
+TRANSACTION_COST_PCT = 0.40   # % chi phi (phi moi gioi 2 chieu + thue) MOI lan mua-ban
 ```
 
 Các giá trị mặc định (`W_SEASONAL=0.2, W_MOMENTUM=0.8`) là kết quả grid-search
 tối ưu cho VN30 — xem lại lịch sử phân tích nếu muốn thử tham số khác.
+
+`TRANSACTION_COST_PCT=0.40` là mức trung bình (phí môi giới ~0.15%/chiều × 2 +
+thuế TNCN cố định 0.1% trên giá trị bán). **Nên chỉnh lại đúng biểu phí công ty
+chứng khoán bạn đang dùng** để số liệu hiển thị (CAGR, Max DD...) sát thực tế nhất —
+tất cả thống kê trong app đều đã trừ chi phí này, không phải con số lý tưởng hóa.
 
 ## Lưu ý quan trọng
 
