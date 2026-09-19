@@ -110,6 +110,24 @@ h2 {
 
 .picks-section { margin-bottom: 2.75rem; }
 
+.preview-section { opacity: 0.94; }
+.preview-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: #fef3c7;
+  color: #92400e;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+.pick-card-preview {
+  outline: 2px dashed #d97706;
+  outline-offset: -2px;
+}
+
 .picks-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));

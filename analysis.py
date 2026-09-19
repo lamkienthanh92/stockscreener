@@ -23,6 +23,7 @@ from datetime import datetime
 DATA_FILE = os.path.join(os.path.dirname(__file__), "data", "vn30_all_daily.csv")
 OUT_DIR = os.path.join(os.path.dirname(__file__), "frontend", "public")
 RECS_FILE = os.path.join(OUT_DIR, "recommendations.json")
+LOCKS_FILE = os.path.join(OUT_DIR, "monthly_locks.json")
 HISTORY_FILE = os.path.join(OUT_DIR, "history.json")
 PRICES_FILE = os.path.join(OUT_DIR, "latest_prices.json")
 PRICE_HISTORY_FILE = os.path.join(OUT_DIR, "price_history.json")
@@ -33,6 +34,7 @@ MOM_DAYS = 90           # ~3 thang, momentum trailing
 W_SEASONAL = 0.2        # trong so mua vu (da grid-search toi uu cho VN30)
 W_MOMENTUM = 0.8        # trong so momentum
 INJECT = 3_000_000      # von bom moi thang, dung de mo phong duong cong von
+PENDING_PREVIEW_FROM_DAY = 15   # tu ngay nay trong thang moi bat dau hien "du kien thang sau"
 
 # Chi phi giao dich moi lan MUA-BAN 1 ma (%): phi moi gioi mua + phi moi gioi ban + thue TNCN ban CK (0.1% co dinh)
 # Muc "trung binh": 0.15% (mua) + 0.15% (ban) + 0.10% (thue) = 0.40%
@@ -103,6 +105,38 @@ def export_prices(cache, all_syms):
 def latest_price(cache, sym):
     sub = cache[sym]
     return float(sub.iloc[-1]["close"]) if len(sub) > 0 else None
+
+
+def load_locks():
+    if os.path.exists(LOCKS_FILE):
+        with open(LOCKS_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+
+def save_locks(locks):
+    with open(LOCKS_FILE, "w", encoding="utf-8") as f:
+        json.dump(locks, f, ensure_ascii=False, indent=2)
+
+
+def get_or_lock_candidates(cache, all_syms, precomp_month, year, month, now):
+    """CHOT xep hang cho (year, month) NGAY LAN CHAY DAU TIEN cua thang do, va luu vao
+    monthly_locks.json. Cac lan chay sau trong CUNG thang chi doc lai ket qua da chot,
+    KHONG tinh lai — de dam bao Top3 khong bao gio troi giua thang du du lieu gia lich
+    su o nguon co bi dieu chinh nguoc (chia co tuc, sua loi du lieu...) hay khong.
+
+    Tra ve: (candidates, locked_at_str, is_freshly_locked)"""
+    key = f"{year}-{month:02d}"
+    locks = load_locks()
+
+    if key in locks:
+        return locks[key]["candidates"], locks[key]["locked_at"], False
+
+    candidates = rank_candidates(cache, all_syms, precomp_month, year, month)
+    locked_at = now.strftime("%Y-%m-%d %H:%M:%S")
+    locks[key] = {"locked_at": locked_at, "candidates": candidates}
+    save_locks(locks)
+    return candidates, locked_at, True
 
 
 def rank_candidates(cache, all_syms, precomp_month, year, month):
@@ -225,6 +259,48 @@ VALIDATION_NOTES = [
 ]
 
 
+def build_next_month_preview(cache, all_syms, precomp_month, cur_year, cur_month, now, latest_data_date):
+    """Xem TRUOC (KHONG chot) Top3 co the co cua thang KE TIEP, de nguoi dung chuan bi
+    von som. Chi tinh tu ngay PENDING_PREVIEW_FROM_DAY tro di trong thang, va LUON tinh
+    lai moi lan chay (khong luu khoa) vi day chi la uoc tinh se con doi cho toi khi
+    thang sau thuc su bat dau va duoc chot bang du lieu day du.
+
+    Ly do ky thuat: ham rank_candidates() dung price_on_or_before() de lay gia tai
+    "as_of" (ngay cuoi thang ke tiep, tuc 1 ngay TRUOC ngay 1 thang sau nua) — vi ngay
+    do nam o TUONG LAI so voi du lieu hien co, ham se tu dong lay gia GAN NHAT dang co
+    (tuc gia hom nay) thay the. Do la cach duy nhat hop ly de "nhin truoc"."""
+    if now.day < PENDING_PREVIEW_FROM_DAY:
+        return None
+
+    next_month = cur_month + 1 if cur_month < 12 else 1
+    next_year = cur_year if cur_month < 12 else cur_year + 1
+
+    candidates = rank_candidates(cache, all_syms, precomp_month, next_year, next_month)
+    if not candidates:
+        return None
+
+    picks = candidates[:3]
+    for p in picks:
+        p["latest_price"] = latest_price(cache, p["symbol"])
+    all_ranked = sorted(candidates, key=lambda x: -x.get("combo_score", -999))[:15]
+
+    return {
+        "target_month": f"{next_year}-{next_month:02d}",
+        "computed_at": now.strftime("%Y-%m-%d %H:%M:%S"),
+        "momentum_uses_data_up_to": latest_data_date,
+        "lock_expected_on": f"{next_year}-{next_month:02d}-01",
+        "picks": picks,
+        "all_candidates_ranked": all_ranked,
+        "note": (
+            "DU KIEN, CHUA CHOT — chi de tham khao chuan bi von truoc. Vi thang "
+            f"{next_year}-{next_month:02d} chua bat dau nen momentum 3 thang o day "
+            f"dang tam dung gia gan nhat ({latest_data_date}) thay cho gia dong cua "
+            "cuoi thang. Danh sach that su se duoc CHOT vao ngay 1 dau thang sau va "
+            "co the khac voi ban du kien nay."
+        ),
+    }
+
+
 def main():
     df = load_data()
     all_syms = sorted(df["symbol"].unique())
@@ -244,22 +320,40 @@ def main():
 
     now = datetime.now()
     cur_year, cur_month = now.year, now.month
+    latest_data_date = df["time"].max().strftime("%Y-%m-%d")
 
     # ---- 0. Xuat gia (moi nhat + lich su) cho MOI ma, dung cho tinh lai/lo va bieu do gia ----
     export_prices(cache, all_syms)
 
     # ---- 1. Goi y THANG HIEN TAI ----
-    candidates = rank_candidates(cache, all_syms, precomp_month, cur_year, cur_month)
+    # QUAN TRONG: xep hang (seasonal/momentum/combo) chi duoc tinh 1 LAN duy nhat cho
+    # moi thang, vao lan chay dau tien cua thang do, roi CHOT lai trong monthly_locks.json.
+    # Cac lan chay sau trong cung thang chi doc lai ban da chot -> Top3 khong the troi
+    # giua thang. Chi rieng "latest_price" (gia hien tai, de tinh lai/lo) la duoc lay moi.
+    candidates_locked, locked_at, freshly_locked = get_or_lock_candidates(
+        cache, all_syms, precomp_month, cur_year, cur_month, now
+    )
+    # deep-copy de khong ghi latest_price nguoc vao file lock (lock chi luu diem xep hang)
+    candidates = [dict(c) for c in candidates_locked]
     picks = candidates[:3]
     for p in picks:
         p["latest_price"] = latest_price(cache, p["symbol"])
+    all_ranked = sorted(candidates, key=lambda x: -x.get("combo_score", -999))[:15]
+
+    # ---- 1b. Xem truoc (KHONG chot) Top3 thang KE TIEP, chi hien tu ngay 15 ----
+    next_month_preview = build_next_month_preview(
+        cache, all_syms, precomp_month, cur_year, cur_month, now, latest_data_date
+    )
 
     result = {
         "generated_at": now.strftime("%Y-%m-%d %H:%M:%S"),
+        "locked_at": locked_at,
+        "freshly_locked_this_run": freshly_locked,
         "target_month": f"{cur_year}-{cur_month:02d}",
         "weights": {"seasonal": W_SEASONAL, "momentum": W_MOMENTUM},
         "picks": picks,
-        "all_candidates_ranked": sorted(candidates, key=lambda x: -x.get("combo_score", -999))[:15],
+        "all_candidates_ranked": all_ranked,
+        "next_month_preview": next_month_preview,
         "note": "Day la ket qua walk-forward, KHONG dam bao loi nhuan. Tu danh gia rui ro truoc khi giao dich.",
     }
     os.makedirs(OUT_DIR, exist_ok=True)
@@ -289,9 +383,16 @@ def main():
     print(f"Da xuat: {HISTORY_FILE}")
     print(f"Da xuat: {PRICES_FILE}")
     print(f"Da xuat: {PRICE_HISTORY_FILE}")
-    print(f"\nTOP 3 MA THANG {cur_year}-{cur_month:02d}:")
+    print(f"\nTOP 3 MA THANG {cur_year}-{cur_month:02d} (da CHOT luc {locked_at}"
+          f"{' -- MOI CHOT LAN NAY' if freshly_locked else ' -- doc lai tu khoa cu, KHONG tinh lai'}):")
     for p in picks:
         print(f"  {p['symbol']}: seasonal={p['seasonal_score']:.2f}  momentum={p['momentum_score']:.1f}%  combo={p['combo_score']:.3f}")
+    if next_month_preview:
+        print(f"\n(DU KIEN, CHUA CHOT) TOP 3 THANG {next_month_preview['target_month']} neu chot ngay hom nay:")
+        for p in next_month_preview["picks"]:
+            print(f"  {p['symbol']}: seasonal={p['seasonal_score']:.2f}  momentum={p['momentum_score']:.1f}%  combo={p['combo_score']:.3f}")
+    else:
+        print(f"\n(Chua toi ngay {PENDING_PREVIEW_FROM_DAY} trong thang nen chua hien du kien thang sau)")
     print(f"\nThong ke lich su ({stats.get('n_months_tested','?')} thang da test):")
     print(f"  Von: {stats.get('total_invested',0):,.0f}d -> {stats.get('final_balance',0):,.0f}d")
     print(f"  CAGR uoc tinh: {stats.get('cagr_approx_pct','?')}%/nam")

@@ -73,7 +73,11 @@ export default function App() {
                 <span className="meta-value">{data.target_month}</span>
               </div>
               <div className="meta-item">
-                <span className="meta-label">Cập nhật lúc</span>
+                <span className="meta-label">Đã chốt xếp hạng lúc (cố định cả tháng)</span>
+                <span className="meta-value">{data.locked_at}</span>
+              </div>
+              <div className="meta-item">
+                <span className="meta-label">Giá &amp; lãi/lỗ cập nhật lúc</span>
                 <span className="meta-value">{data.generated_at}</span>
               </div>
               <div className="meta-item">
@@ -113,6 +117,46 @@ export default function App() {
             </section>
 
             <PositionSizer picks={data.picks} targetMonth={data.target_month} />
+
+            {data.next_month_preview && (
+              <section className="picks-section preview-section">
+                <h2>
+                  Dự kiến tháng {data.next_month_preview.target_month}{' '}
+                  <span className="preview-badge">CHƯA CHỐT</span>
+                </h2>
+                <p className="notice-sub">
+                  Chỉ để tham khảo chuẩn bị vốn trước. Momentum đang tạm dùng giá gần
+                  nhất ({data.next_month_preview.momentum_uses_data_up_to}) thay cho giá
+                  đóng cửa cuối tháng, nên danh sách này còn có thể đổi. Danh sách THẬT
+                  sẽ được chốt vào ngày {data.next_month_preview.lock_expected_on} và có
+                  thể khác với bản dự kiến này.
+                </p>
+                <div className="picks-grid">
+                  {data.next_month_preview.picks.map((p, i) => (
+                    <div className="pick-card pick-card-preview" key={p.symbol}>
+                      <span className="pick-rank">{String(i + 1).padStart(2, '0')}</span>
+                      <span className="pick-symbol">
+                        {p.symbol} <PriceInfoButton symbol={p.symbol} />
+                      </span>
+                      <div className="pick-stats">
+                        <div className="pick-stat">
+                          <span>Mùa vụ (Sharpe)</span>
+                          <strong>{p.seasonal_score.toFixed(2)}</strong>
+                        </div>
+                        <div className="pick-stat">
+                          <span>Momentum 3T</span>
+                          <PctTag value={p.momentum_score} />
+                        </div>
+                        <div className="pick-stat">
+                          <span>Điểm tổng hợp</span>
+                          <strong>{p.combo_score.toFixed(3)}</strong>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
 
             <section className="table-section">
               <h2>Toàn bộ xếp hạng (15 mã đầu)</h2>
