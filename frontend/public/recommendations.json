@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18 05:45:00",
+  "generated_at": "2026-09-19 05:42:03",
   "target_month": "2026-09",
   "weights": {
     "seasonal": 0.2,
@@ -11,21 +11,21 @@
       "seasonal_score": -0.06413796557549475,
       "momentum_score": 15.178135675939487,
       "combo_score": 0.9600000000000001,
-      "latest_price": 242.2
+      "latest_price": 241.2
     },
     {
       "symbol": "STB",
       "seasonal_score": -0.2015876836799839,
       "momentum_score": 12.686567164179108,
       "combo_score": 0.9266666666666667,
-      "latest_price": 76.8
+      "latest_price": 78.2
     },
     {
       "symbol": "SSB",
       "seasonal_score": -5.858956534693673,
       "momentum_score": 20.422535211267622,
       "combo_score": 0.8066666666666668,
-      "latest_price": 23.6
+      "latest_price": 24.1
     }
   ],
   "all_candidates_ranked": [
@@ -34,21 +34,21 @@
       "seasonal_score": -0.06413796557549475,
       "momentum_score": 15.178135675939487,
       "combo_score": 0.9600000000000001,
-      "latest_price": 242.2
+      "latest_price": 241.2
     },
     {
       "symbol": "STB",
       "seasonal_score": -0.2015876836799839,
       "momentum_score": 12.686567164179108,
       "combo_score": 0.9266666666666667,
-      "latest_price": 76.8
+      "latest_price": 78.2
     },
     {
       "symbol": "SSB",
       "seasonal_score": -5.858956534693673,
       "momentum_score": 20.422535211267622,
       "combo_score": 0.8066666666666668,
-      "latest_price": 23.6
+      "latest_price": 24.1
     },
     {
       "symbol": "HDB",
