@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-19 07:33:45",
-  "locked_at": "2026-09-19 07:30:54",
-  "freshly_locked_this_run": false,
+  "generated_at": "2026-09-20 06:00:03",
+  "locked_at": "2026-09-20 06:00:03",
+  "freshly_locked_this_run": true,
   "target_month": "2026-09",
   "weights": {
     "seasonal": 0.2,
@@ -127,7 +127,7 @@
   ],
   "next_month_preview": {
     "target_month": "2026-10",
-    "computed_at": "2026-09-19 07:33:45",
+    "computed_at": "2026-09-20 06:00:03",
     "momentum_uses_data_up_to": "2026-09-18",
     "lock_expected_on": "2026-10-01",
     "picks": [
