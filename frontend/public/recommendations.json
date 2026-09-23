@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-22 05:59:12",
-  "locked_at": "2026-09-22 05:59:12",
+  "generated_at": "2026-09-23 05:47:57",
+  "locked_at": "2026-09-23 05:47:57",
   "freshly_locked_this_run": true,
   "target_month": "2026-09",
   "weights": {
@@ -13,21 +13,21 @@
       "seasonal_score": -0.06413796557549475,
       "momentum_score": 15.178135675939487,
       "combo_score": 0.9600000000000001,
-      "latest_price": 238.0
+      "latest_price": 241.4
     },
     {
       "symbol": "STB",
       "seasonal_score": -0.2015876836799839,
       "momentum_score": 12.686567164179108,
       "combo_score": 0.9266666666666667,
-      "latest_price": 77.5
+      "latest_price": 77.6
     },
     {
       "symbol": "SSB",
       "seasonal_score": -5.858956534693673,
       "momentum_score": 20.422535211267622,
       "combo_score": 0.8066666666666668,
-      "latest_price": 22.45
+      "latest_price": 20.95
     }
   ],
   "all_candidates_ranked": [
@@ -36,21 +36,21 @@
       "seasonal_score": -0.06413796557549475,
       "momentum_score": 15.178135675939487,
       "combo_score": 0.9600000000000001,
-      "latest_price": 238.0
+      "latest_price": 241.4
     },
     {
       "symbol": "STB",
       "seasonal_score": -0.2015876836799839,
       "momentum_score": 12.686567164179108,
       "combo_score": 0.9266666666666667,
-      "latest_price": 77.5
+      "latest_price": 77.6
     },
     {
       "symbol": "SSB",
       "seasonal_score": -5.858956534693673,
       "momentum_score": 20.422535211267622,
       "combo_score": 0.8066666666666668,
-      "latest_price": 22.45
+      "latest_price": 20.95
     },
     {
       "symbol": "HDB",
@@ -127,128 +127,128 @@
   ],
   "next_month_preview": {
     "target_month": "2026-10",
-    "computed_at": "2026-09-22 05:59:12",
-    "momentum_uses_data_up_to": "2026-09-21",
+    "computed_at": "2026-09-23 05:47:57",
+    "momentum_uses_data_up_to": "2026-09-23",
     "lock_expected_on": "2026-10-01",
     "picks": [
       {
         "symbol": "SSB",
         "seasonal_score": -0.1611928867881887,
-        "momentum_score": 36.06060606060606,
+        "momentum_score": 26.969696969696955,
         "combo_score": 0.9466666666666668,
-        "latest_price": 22.45
+        "latest_price": 20.95
       },
       {
-        "symbol": "GAS",
-        "seasonal_score": -0.5115078077429962,
-        "momentum_score": 14.102564102564097,
-        "combo_score": 0.8733333333333334,
-        "latest_price": 89.0
+        "symbol": "VIC",
+        "seasonal_score": -0.0413767967292402,
+        "momentum_score": 11.19299861814833,
+        "combo_score": 0.9133333333333333,
+        "latest_price": 241.4
       },
       {
         "symbol": "VNM",
         "seasonal_score": -0.10931263311234787,
-        "momentum_score": 9.782608695652172,
+        "momentum_score": 10.32608695652173,
         "combo_score": 0.8733333333333334,
-        "latest_price": 60.6
+        "latest_price": 60.9
       }
     ],
     "all_candidates_ranked": [
       {
         "symbol": "SSB",
         "seasonal_score": -0.1611928867881887,
-        "momentum_score": 36.06060606060606,
+        "momentum_score": 26.969696969696955,
         "combo_score": 0.9466666666666668,
-        "latest_price": 22.45
-      },
-      {
-        "symbol": "GAS",
-        "seasonal_score": -0.5115078077429962,
-        "momentum_score": 14.102564102564097,
-        "combo_score": 0.8733333333333334,
-        "latest_price": 89.0
-      },
-      {
-        "symbol": "VNM",
-        "seasonal_score": -0.10931263311234787,
-        "momentum_score": 9.782608695652172,
-        "combo_score": 0.8733333333333334,
-        "latest_price": 60.6
+        "latest_price": 20.95
       },
       {
         "symbol": "VIC",
         "seasonal_score": -0.0413767967292402,
-        "momentum_score": 9.626900046061726,
-        "combo_score": 0.8600000000000001
+        "momentum_score": 11.19299861814833,
+        "combo_score": 0.9133333333333333,
+        "latest_price": 241.4
+      },
+      {
+        "symbol": "VNM",
+        "seasonal_score": -0.10931263311234787,
+        "momentum_score": 10.32608695652173,
+        "combo_score": 0.8733333333333334,
+        "latest_price": 60.9
+      },
+      {
+        "symbol": "GAS",
+        "seasonal_score": -0.5115078077429962,
+        "momentum_score": 10.256410256410264,
+        "combo_score": 0.8200000000000001
       },
       {
         "symbol": "BSR",
         "seasonal_score": -1.7358145747882372,
-        "momentum_score": 23.559793404847042,
+        "momentum_score": 26.142232816845446,
         "combo_score": 0.8133333333333335
       },
       {
         "symbol": "MCH",
         "seasonal_score": 0.20211442916089847,
-        "momentum_score": 0.6130544536602889,
+        "momentum_score": 3.353768481788677,
         "combo_score": 0.7933333333333334
       },
       {
         "symbol": "STB",
         "seasonal_score": -1.0831025884144834,
-        "momentum_score": 5.874316939890711,
+        "momentum_score": 6.010928961748618,
         "combo_score": 0.7466666666666668
       },
       {
         "symbol": "HDB",
         "seasonal_score": -0.9297288918708432,
-        "momentum_score": 2.6315789473684292,
+        "momentum_score": 5.827067669172914,
         "combo_score": 0.7266666666666668
-      },
-      {
-        "symbol": "ACB",
-        "seasonal_score": -0.19466983102295526,
-        "momentum_score": -2.428256070640167,
-        "combo_score": 0.7
       },
       {
         "symbol": "VPB",
         "seasonal_score": -0.7835638476570705,
-        "momentum_score": 0.0,
+        "momentum_score": 0.902527075812265,
         "combo_score": 0.6866666666666666
       },
       {
         "symbol": "SAB",
         "seasonal_score": -0.6051407021196828,
-        "momentum_score": -2.5198938992042397,
-        "combo_score": 0.64
+        "momentum_score": -1.4146772767462457,
+        "combo_score": 0.6666666666666666
       },
       {
-        "symbol": "VCB",
-        "seasonal_score": 0.3342389037100558,
-        "momentum_score": -5.3405820275023945,
-        "combo_score": 0.6133333333333334
-      },
-      {
-        "symbol": "MBB",
-        "seasonal_score": -1.9775689751311971,
-        "momentum_score": -3.0067895247332777,
-        "combo_score": 0.54
+        "symbol": "ACB",
+        "seasonal_score": -0.19466983102295526,
+        "momentum_score": -2.8697571743929284,
+        "combo_score": 0.5933333333333334
       },
       {
         "symbol": "GVR",
         "seasonal_score": -1.2889002587993865,
-        "momentum_score": -3.1674208144796268,
-        "combo_score": 0.5333333333333333
+        "momentum_score": -2.26244343891403,
+        "combo_score": 0.5866666666666667
       },
       {
-        "symbol": "SSI",
-        "seasonal_score": -2.5485615412792706,
-        "momentum_score": -3.722426470588247,
-        "combo_score": 0.4733333333333334
+        "symbol": "VJC",
+        "seasonal_score": 0.604088226134622,
+        "momentum_score": -3.661162957645381,
+        "combo_score": 0.5666666666666667
+      },
+      {
+        "symbol": "MBB",
+        "seasonal_score": -1.9775689751311971,
+        "momentum_score": -2.279340446168776,
+        "combo_score": 0.54
+      },
+      {
+        "symbol": "VCB",
+        "seasonal_score": 0.3342389037100558,
+        "momentum_score": -5.500479692996474,
+        "combo_score": 0.5333333333333333
       }
     ],
-    "note": "DU KIEN, CHUA CHOT — chi de tham khao chuan bi von truoc. Vi thang 2026-10 chua bat dau nen momentum 3 thang o day dang tam dung gia gan nhat (2026-09-21) thay cho gia dong cua cuoi thang. Danh sach that su se duoc CHOT vao ngay 1 dau thang sau va co the khac voi ban du kien nay."
+    "note": "DU KIEN, CHUA CHOT — chi de tham khao chuan bi von truoc. Vi thang 2026-10 chua bat dau nen momentum 3 thang o day dang tam dung gia gan nhat (2026-09-23) thay cho gia dong cua cuoi thang. Danh sach that su se duoc CHOT vao ngay 1 dau thang sau va co the khac voi ban du kien nay."
   },
   "note": "Day la ket qua walk-forward, KHONG dam bao loi nhuan. Tu danh gia rui ro truoc khi giao dich."
 }
